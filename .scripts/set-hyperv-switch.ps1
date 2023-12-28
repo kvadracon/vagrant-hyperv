@@ -8,7 +8,6 @@ param (
 $restartRequired = 0
 $startTimeout = 20
 $stopTimeout = 10
-#$sshPrivateKey = "C:\HashiCorp\Vagrant\generic\ubuntu2004\.vagrant\machines\server1\hyperv\private_key"
 
 if (Get-VM -VMName $vmName -ErrorAction SilentlyContinue) {
   if (Get-VM -VMNAME $vmName | Where-Object {$_.State -eq "Running"}) {
@@ -55,7 +54,7 @@ if (Get-VM -VMName $vmName -ErrorAction SilentlyContinue) {
     } else {
       Write-Host "VM has already a fixed IP: $staticIP"
     }
-    #TODO: Setup samba share
+    #
   } else {
     throw "ERROR: VM needs to be running to set a fixed IP."
   }
