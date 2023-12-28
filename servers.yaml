@@ -1,0 +1,15 @@
+- name: server1  
+  box: Ubuntu-20.04
+  ram: 1024
+  ip: 192.168.0.11
+  script: "./.scripts/apps-install.sh"
+- name: server2
+  box: Ubuntu-20.04
+  ram: 1024
+  ip: 192.168.0.12
+  script: "./.scripts/apps-install.sh"
+- name: server3
+  box: Ubuntu-20.04
+  ram: 1024
+  ip: 192.168.0.13
+  script: "./.scripts/apps-install.sh"
